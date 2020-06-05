@@ -8,14 +8,33 @@ namespace _2._6_Studio
         static void Main(string[] args)
         {
             var circle = new Circle();
-
-            Console.WriteLine("Enter a radius:");
-
-            circle.radius = CheckIfNum.CheckNum(Console.ReadLine());
-            circle.GetArea();
             
+            
+            //double pi = 3.14;
+            Console.WriteLine("Enter a radius: ");
+            string userInput = Console.ReadLine();
+            circle.radius = NumCheck.CheckIfNum(userInput);
+            circle.GetArea();
+            circle.GetCircum();
 
-            Console.WriteLine("The area of the circle is {0}", circle.area);
+            //double A = pi * r * r;
+            Console.WriteLine("The area of a circle of radius {0} is: {1}", circle.radius, circle.radius);
+
+            //Circumference
+            //double C = 2 * pi * r;
+            Console.WriteLine("The circumference of a circle of radius {0} is: {1}", circle.radius, circle.c);
+
+            ////Diameter
+            //double D = 2 * r;
+            //Console.WriteLine("The diameter of a circle of radius {0} is: {1}", , D);
+
+            ////How many miles per Gallon
+            //Console.WriteLine("Enter miles per gallon: ");
+            //userInput = Console.ReadLine();
+            //double milesPerGallon = double.Parse(userInput);
+            //double gallonsUsed = C / milesPerGallon;
+            //Console.WriteLine("{0} miles per gallon in a circumference {1} uses: {2}", milesPerGallon, C, gallonsUsed);
+
 
         }
     }
